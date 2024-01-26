@@ -1,7 +1,7 @@
 import React from 'react'
 import close from '../assets/close.svg'
 
-export const NavActive = (props) => {
+export const NavMenu = (props) => {
   const {isActive, setActive} = props;
   const toggleMenu = () => {
     console.log('click');

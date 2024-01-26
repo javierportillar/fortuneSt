@@ -1,28 +1,14 @@
 import {useState} from 'react'
-import navIcon from '../assets/navIcon.svg'
-import ffimg from '../assets/ffimg.png'
+import {NavMenu} from './navMenu'
+import {NavElements} from './navElements'
 
-
-export const Nav = (props) => {
-  
-  const {isActive, setActive} = props;
-  const toggleMenu = () => {
-    console.log('click');
-    setActive(!isActive);
-  };
-  
-  return (
+export const Nav = () => {
+  const [isActive, setActive] = useState(false);
+  return(
     <div>
-    <div className='navBar'>
-      <div className='navBar__logo' onClick={toggleMenu}>
-        <img src= {navIcon} alt='logo' />
-      </div>
-      <div className='navBar__links'>
-        <img src={ffimg} alt="" />
-        <a href='#'>Contact</a>
-      </div>
-    </div>
-    
+      <NavElements isActive={isActive} setActive={setActive}/>
+      <NavMenu isActive={isActive} setActive={setActive}/>
     </div>
   )
+ 
 }
