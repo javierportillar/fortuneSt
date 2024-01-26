@@ -1,11 +1,13 @@
-
-
+import ffservices from '../assets/ffservices.png'
 export const Landing_2 = () => {
   return (
-    <div>
-      <div className="ff__info">
-        <div className="ff__info__tittle">
-          <h1>¿Qué es Fondo Fortuna?</h1>
+    <div className="ff__info">
+      <div className="ff__info__tittle">
+        <h1>¿Qué es Fondo Fortuna?</h1>
+      </div>
+      <div className='ff__info__content'>
+        <div className="ff__info__image">
+          <img src={ffservices} alt="" />
         </div>
         <div className="ff__info__text">
           <p>
