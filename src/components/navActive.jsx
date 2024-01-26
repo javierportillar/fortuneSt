@@ -1,13 +1,20 @@
 import React from 'react'
 import close from '../assets/close.svg'
 
-export const NavActive = () => {
+export const NavActive = (props) => {
+  const {isActive, setActive} = props;
+
+  const toggleMenu = () => {
+    console.log('click');
+    setActive(!isActive);
+  }
+
   return (
-    <div className='nav inactive'>
-      <div className='nav__close'>
+    <div className={`nav ${isActive? 'active':'inactive'}`}>
+      <div className='nav__close' onClick={toggleMenu}>
         <img src={close} alt="" />
       </div>
-      <div className='nav__List'>
+      <div className='nav__list'>
         <ul>
           <li>
             <a href='#'>Home</a>
