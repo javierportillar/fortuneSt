@@ -1,4 +1,3 @@
-import React from 'react'
 import close from '../assets/close.svg'
 
 export const NavMenu = (props) => {
