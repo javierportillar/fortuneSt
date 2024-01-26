@@ -6,6 +6,8 @@ body {
 }
 
 .navBar {
+  position: fixed;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -81,20 +83,17 @@ body {
         transform: scale(1.1);
       }
     }
-
-    /* &:hover{
-      transform: scale(1.1);
-    } */
   }
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 20%;
   background-color: #D98E04;
   transition: transform 0.3s ease-in-out;
 }
@@ -113,6 +112,7 @@ body {
   width: 50%;
   color: black;
   cursor: pointer;
+  margin-top: -1em;
 
   li {
     transition: all 0.3s ease-in-out;
@@ -130,10 +130,11 @@ body {
 
 
 .nav__close {
+  position: relative;
+  z-index: 5;
   display: flex;
   justify-content: flex-end;
   margin-top: 0.5em;
-  margin-right: 0.5em;
   width: 98%;
   border-right: 0.5em;
   background-color: #D98E04;
@@ -147,6 +148,45 @@ body {
     &:hover {
       transform: rotate(720deg);
       /* Hace que la "X" gire tres veces (360deg * 3) */
+    }
+  }
+}
+
+.ff__landing {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  background-color: #F2E6C2;
+
+  .ff__tittle {
+    font-family: 'Coming Soon', cursive;
+    font-weight: 800;
+    font-size: 4em;
+    width: 70%;
+    margin-left: 1em;
+
+    h1:nth-child(1) {
+      background: linear-gradient(to left, rgb(47, 46, 40), gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1:nth-child(2) {
+      background: linear-gradient(to right, rgb(47, 46, 40), gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+
+  .ff__image {
+    margin-top: 6em;
+    margin-right: 7em;
+
+    img {
+      width: 120%;
     }
   }
 }
