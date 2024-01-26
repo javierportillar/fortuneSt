@@ -1,10 +1,11 @@
 import {useState} from 'react'
 import navIcon from '../assets/navIcon.svg'
 import ffimg from '../assets/ffimg.png'
-import { NavActive } from './navActive'
 
-export const Nav = () => {
-  const [isActive, setActive] = useState(false);
+
+export const Nav = (props) => {
+  
+  const {isActive, setActive} = props;
   const toggleMenu = () => {
     console.log('click');
     setActive(!isActive);
@@ -21,7 +22,7 @@ export const Nav = () => {
         <a href='#'>Contact</a>
       </div>
     </div>
-    <NavActive isActive={isActive}></NavActive>
+    
     </div>
   )
 }
