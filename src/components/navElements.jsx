@@ -4,8 +4,8 @@ import navIcon from '../assets/navIcon.svg'
 
 export const NavElements = (props) => {
   const {isActive, setActive} = props;
+  
   const toggleMenu = () => {
-    console.log('click');
     setActive(!isActive);
   };
   
@@ -16,7 +16,7 @@ export const NavElements = (props) => {
         <img src= {navIcon} alt='logo' />
       </div>
       <div className='navBar__links'>
-        <img src={ffimg} alt="" />
+        <a href="/"><img src={ffimg} alt="" /></a>
         <a href='#'>Contact</a>
       </div>
     </div>

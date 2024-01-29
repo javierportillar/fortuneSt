@@ -10,5 +10,4 @@ export const Nav = () => {
       <NavMenu isActive={isActive} setActive={setActive}/>
     </div>
   )
- 
 }

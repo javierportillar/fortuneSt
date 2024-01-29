@@ -3,7 +3,6 @@ import close from '../assets/close.svg'
 export const NavMenu = (props) => {
   const {isActive, setActive} = props;
   const toggleMenu = () => {
-    console.log('click');
     setActive(!isActive);
   };
   return (
@@ -12,12 +11,13 @@ export const NavMenu = (props) => {
         <img src={close} alt="" />
       </div>
       <div className='nav__list'>
+        <h2>Menú</h2>
         <ul> 
           <li>
-            <a href='#'>Home</a>
+            <a href='/'>Home</a>
           </li>
           <li>
-            <a href="/producs">Productos</a>
+            <a href="/products">Productos</a>
           </li>
           <li>
             <a href="/about">Acerca nosotros</a>
