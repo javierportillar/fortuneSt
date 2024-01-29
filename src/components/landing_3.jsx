@@ -1,4 +1,3 @@
-import { ProductButton } from './buttonProducts'
 
 export const Landing_3 = () => {
   return (
