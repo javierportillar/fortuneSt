@@ -1,19 +1,25 @@
-import React from 'react'
+import datos from '../../public/datos'
+const productos = datos;
 
 export const ProductsList = () => {
   return (
     <div className='products__list'>
-        <div className='products__list__item'>
-          <div className='products__list__item__image'>
-            <img src="https://via.placeholder.com/200x200" alt="" />
+      {productos.map((producto) => {
+        const { id, name, description, price, img } = producto;
+        return (
+          <div className='products__list__item' key={id}>
+            <div className='products__list__item__image'>
+              <img src={img} alt="" />
+            </div>
+            <div className='products__list__item__info'>
+              <h3>{name}</h3>
+              <p>{description}</p>
+              <p>${price}</p>
+              <button>Agregar al carrito</button>
+            </div>
           </div>
-          <div className='products__list__item__info'>
-            <h3>Nombre del producto</h3>
-            <p>Descripción del producto</p>
-            <p>$ 0.00</p>
-            <button>Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
+        )
+      })}
+    </div>
   )
 }
