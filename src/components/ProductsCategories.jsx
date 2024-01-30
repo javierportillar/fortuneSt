@@ -1,18 +1,17 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
+import categories from '../../public/categories';
 export const ProductsCategories = () => {
+
   return (
     <div className='products__categories'>
-        <ul>
-          <li><a href="">Aseo Personal</a></li>
-          <li><a href="">Salud</a></li>
-          <li><a href="">Aseo General</a></li>
-          <li><a href="">Canasta Familiar</a></li>
-          <li><a href="">Snacks_Mecato</a></li>
-          <li><a href="">Sobre Pedidos (Electromenores)</a></li>
-          <li><a href="">Hogar</a></li>
-          <li><a href="">Mascotas</a></li>
-        </ul>
-      </div>
+      <ul>
+        {categories.map((category) => (
+          <li key={category.path}>
+            <Link to={`/products/${category.path}`}>{category.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
